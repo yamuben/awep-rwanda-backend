@@ -1,0 +1,40 @@
+{
+  "name": "awep-rwanda-backend",
+  "version": "1.0.0",
+  "description": "African Women Entrepreneurship Program (AWEP) is an outreach, education, and engagement initiative that targets African women entrepreneurs to promote business growth, increase trade both regionally and to U.S. markets through the African Growth and Opportunity Act (AGOA) and other trade initiatives.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-start":"nodemon --exec babel-node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamuben/awep-rwanda-backend.git"
+  },
+  "author": "Eng Iyamuremye Benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamuben/awep-rwanda-backend/issues"
+  },
+  "homepage": "https://github.com/yamuben/awep-rwanda-backend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.12.10",
+    "axios": "^0.21.1",
+    "babel-core": "^6.26.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "nodemailer": "^6.5.0"
+  }
+}
