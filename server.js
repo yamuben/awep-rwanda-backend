@@ -18,8 +18,8 @@ app.use('/awep/api/v1',appRoutes);
 app.use('/awep/api/v1',memberRoutes);
 
 app.use('/',(req,res)=>{
-    res.status(200).send({
-        statu:200,
+    res.status(404).send({
+        statu:404,
         message:"this route does not exist"
     })
 })
