@@ -13,6 +13,7 @@ const memberSchema = new mongoose.Schema({
   facebook: String,
   twitter: String,
   phone: String,
+  boardTitle:String,
 
   email: {
     type: String,
@@ -23,6 +24,7 @@ const memberSchema = new mongoose.Schema({
   gender: {
     type: String,
     enum: ["male", "female"],
+    default: "female"
   },
   role: {
     type: String,
@@ -32,7 +34,8 @@ const memberSchema = new mongoose.Schema({
   },
   status:{
       type: String,
-      enum: ["active","inactive"]
+      enum: ["active","inactive"],
+      default: "active"
   },
   registeredOn: {
     type: String,
