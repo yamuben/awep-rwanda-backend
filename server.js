@@ -6,6 +6,7 @@ import cors from 'cors';
 
 import appRoutes from './server/routes/applicantRoutes';
 import memberRoutes from './server/routes/memberRoutes';
+import partenerRoutes from './server/routes/partenerRoutes';
 
 dotenv.config({path:'./.env'});
 
@@ -16,6 +17,7 @@ app.use(bodyParse.json());
 
 app.use('/awep/api/v1',appRoutes);
 app.use('/awep/api/v1',memberRoutes);
+app.use('/awep/api/v1',partenerRoutes);
 
 app.use('/',(req,res)=>{
     res.status(404).send({
