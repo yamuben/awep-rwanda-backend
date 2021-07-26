@@ -5,6 +5,7 @@ const memberRoutes =express.Router();
 
 memberRoutes.post('/member',MemberController.registerMember);
 memberRoutes.get('/members',MemberController.getAllMembers);
+memberRoutes.get('/members/active',MemberController.getAllActiveMembers);
 memberRoutes.get('/members/board',MemberController.getAllBoardMembers);
 memberRoutes.get('/member/:id',MemberController.getOneMember);
 memberRoutes.patch('/member/:id',MemberController.editOneMember);

@@ -13,6 +13,15 @@ class MemberController{
     };
 
     static getAllMembers = async (req, res) => {
+      const data = await memberInfos.find();
+  
+      if (!data) {
+        return Response.errorMessage(res, "failed", 404);
+      }
+  
+      return Response.successMessage(res, "success", data, 200);
+    };
+    static getAllActiveMembers = async (req, res) => {
         const data = await memberInfos.find({status:"active"});
     
         if (!data) {
