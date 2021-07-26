@@ -13,7 +13,7 @@ class MemberController{
     };
 
     static getAllMembers = async (req, res) => {
-        const data = await memberInfos.find();
+        const data = await memberInfos.find({status:"active"});
     
         if (!data) {
           return Response.errorMessage(res, "failed", 404);
@@ -23,7 +23,7 @@ class MemberController{
       };
 
       static getAllBoardMembers = async (req, res) => {
-        const data = await memberInfos.find({role:"board"});
+        const data = await memberInfos.find({role:"board",status:"active"});
     
         if (!data) {
           return Response.errorMessage(res, "failed", 404);
